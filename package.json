@@ -1,0 +1,40 @@
+{
+    "name": "slvtt",
+    "version": "1.0.0",
+    "description": "Superlative video thumbnail thing",
+    "main": "src/index.js",
+    "type": "module",
+    "scripts": {
+        "test": "vitest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/insanity54/slvtt.git"
+    },
+    "keywords": [
+        "storyboard",
+        "image",
+        "video",
+        "thumbnail",
+        "preview",
+        "sprite",
+        "vtt",
+        "timeline",
+        "hover"
+    ],
+    "author": "Chris Grimmett <chris@grimtech.net>",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/insanity54/slvtt/issues"
+    },
+    "homepage": "https://github.com/insanity54/slvtt#readme",
+    "devDependencies": {
+        "tsup": "^8.5.0",
+        "tsx": "^4.20.3",
+        "typescript": "^5.9.2",
+        "vitest": "^3.2.4"
+    },
+    "dependencies": {
+        "sharp": "^0.34.3"
+    }
+}
