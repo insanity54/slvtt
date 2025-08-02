@@ -45,3 +45,4 @@ export async function create(userSuppliedOptions: SLVTTOptions): Promise<void> {
     }
 }
 
+export type { SLVTTOptions, SLVTTManifest } from "./types/types";

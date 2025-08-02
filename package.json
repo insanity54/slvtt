@@ -3,7 +3,6 @@
     "version": "0.3.1",
     "description": "Superlative video thumbnail thing",
     "exports": {
-        "types": "./dist/main.d.ts",
         "default": "./dist/main.js"
     },
     "bin": {
