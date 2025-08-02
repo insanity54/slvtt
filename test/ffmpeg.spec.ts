@@ -57,8 +57,8 @@ describe('ffmpeg', () => {
                 const config: ResolvedSLVTTOptions = {
                     videoFilePath: sampleVideo,
                     numSamples,
-                    frameHeight: 69,
-                    frameWidth: 140,
+                    frameHeight: 30,
+                    frameWidth: 53,
                     concurrencyLimit: 1,
                     outputDirectory,
                     cols: 5,

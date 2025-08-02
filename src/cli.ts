@@ -3,8 +3,8 @@
 import { resolve } from 'path';
 import { tmpdir } from 'os';
 import { exit } from 'process';
-import { create } from './main'; // adjust to main.ts if using ts-node
-import { getRandomId } from './random'; // needed for tmpDir
+import { create } from './main';
+import { getRandomId } from './random';
 import { rm } from 'fs/promises';
 
 function parseArgs(argv: string[]) {
@@ -32,15 +32,15 @@ const args = parseArgs(process.argv);
 // Required
 if (!args.input || !args.output) {
   console.error('Usage: cli.ts --input <path> --output <dir> [options]');
-  console.error('Options: --frame-width <px> --frame-height <px> --interval <sec> --columns [n] --rows [n] --samples [n] --concurrency [n]');
+  console.error('Options: --frame-width <px> --frame-height <px> --interval <sec> --columns <n> --rows <n> --samples <n> --concurrency <n>');
   exit(1);
 }
 
 const options = {
   videoFilePath: resolve(args.input),
   outputDirectory: resolve(args.output),
-  tmpDir: resolve(tmpdir(), getRandomId()), // auto-generated tmp dir
-  concurrencyLimit: parseInt(args.concurrency ?? '3'), // default to 3
+  tmpDir: resolve(tmpdir(), getRandomId()),
+  concurrencyLimit: parseInt(args.concurrency ?? '10'),
   frameWidth: parseInt(args['frame-width'] ?? '160'),
   frameHeight: parseInt(args['frame-height'] ?? '90'),
   interval: parseFloat(args.interval ?? '10'),

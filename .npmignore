@@ -1,0 +1,45 @@
+.github/
+.gitignore
+.nvmrc
+examples/
+
+# Ignore node_modules — npm ignores this by default, but it's good to be explicit
+node_modules/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignore test and coverage files
+test/
+tests/
+*.spec.*
+*.test.*
+coverage/
+
+# Ignore build tools and configuration
+.vscode/
+.idea/
+*.tsbuildinfo
+
+# Ignore build artifacts
+dist/
+build/
+out/
+
+# Ignore source files if you're publishing only compiled output
+src/
+*.ts
+*.tsx
+
+# Ignore dotfiles (optional, if not needed for runtime)
+.env
+.env.*
+
+# Ignore misc
+npm-debug.log*
+yarn-error.log
+.pnpm-debug.log

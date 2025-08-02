@@ -8,10 +8,10 @@ export interface SLVTTOptions {
     frameWidth?: number
     frameHeight?: number
     numSamples?: number
-    tmpDir: string
-    concurrencyLimit: number
-    rows: number
-    cols: number
+    tmpDir?: string
+    concurrencyLimit?: number
+    rows?: number
+    cols?: number
 }
 
 

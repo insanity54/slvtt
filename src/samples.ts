@@ -2,13 +2,13 @@ import { Sample, VideoMetadata } from "./types/types";
 import { formatDuration } from "./ffmpeg/format";
 
 export function getSamples(metadata: VideoMetadata, numSamples: number): Sample[] {
-    const captureInterval = metadata.duration / numSamples; // in milliseconds
+    const captureInterval = metadata.duration / numSamples;
 
     const samples: Sample[] = [];
 
     for (let i = 0; i < numSamples; i++) {
-        const ms = Math.floor(i * captureInterval);
-        samples.push({ timestamp: ms, formatted: formatDuration(ms), index: i });
+        const seconds = Math.floor(i * captureInterval);
+        samples.push({ timestamp: seconds, formatted: formatDuration(seconds), index: i });
     }
 
     return samples;
