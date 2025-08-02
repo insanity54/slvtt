@@ -2,6 +2,8 @@
 .gitignore
 .nvmrc
 examples/
+tsup.config.ts
+package/
 
 # Ignore node_modules
 node_modules/
@@ -38,3 +40,6 @@ src/
 npm-debug.log*
 yarn-error.log
 .pnpm-debug.log
+
+# Ignore .tgz
+*.tgz
