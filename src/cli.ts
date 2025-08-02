@@ -5,6 +5,7 @@ import { tmpdir } from 'os';
 import { exit } from 'process';
 import { create } from './main'; // adjust to main.ts if using ts-node
 import { getRandomId } from './random'; // needed for tmpDir
+import { rm } from 'fs/promises';
 
 function parseArgs(argv: string[]) {
   const args: Record<string, string> = {};
@@ -30,8 +31,8 @@ const args = parseArgs(process.argv);
 
 // Required
 if (!args.input || !args.output) {
-  console.error('Usage: slvtt.ts --input <path> --output <dir> [options]');
-  console.error('Options: --tile-width <px> --tile-height <px> --interval <sec> --columns <n> --rows <n> --concurrency <n>');
+  console.error('Usage: cli.ts --input <path> --output <dir> [options]');
+  console.error('Options: --frame-width <px> --frame-height <px> --interval <sec> --columns [n] --rows [n] --samples [n] --concurrency [n]');
   exit(1);
 }
 
@@ -39,19 +40,21 @@ const options = {
   videoFilePath: resolve(args.input),
   outputDirectory: resolve(args.output),
   tmpDir: resolve(tmpdir(), getRandomId()), // auto-generated tmp dir
-  concurrencyLimit: parseInt(args.concurrency ?? '4'), // default to 4
-  frameWidth: parseInt(args['tile-width'] ?? '160'),
-  frameHeight: parseInt(args['tile-height'] ?? '90'),
+  concurrencyLimit: parseInt(args.concurrency ?? '3'), // default to 3
+  frameWidth: parseInt(args['frame-width'] ?? '160'),
+  frameHeight: parseInt(args['frame-height'] ?? '90'),
   interval: parseFloat(args.interval ?? '10'),
   cols: parseInt(args.columns ?? '5'),
   rows: parseInt(args.rows ?? '5'),
+  numSamples: parseInt(args.samples ?? 100),
 };
 
 create(options)
   .then(() => {
-    console.log('Storyboard created successfully.');
+    console.log('[slvtt] VideoFrameSheet created successfully.');
+    return rm(options.tmpDir, { recursive: true, force: true })
   })
   .catch((err) => {
-    console.error('[video-storyboard] Failed:', err);
+    console.error('[slvtt] Failed:', err);
     exit(1);
   });

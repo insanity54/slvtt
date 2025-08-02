@@ -1,4 +1,4 @@
-import { Sample, StoryboardOptions, VideoMetadata } from "./types/types";
+import { Sample, VideoMetadata } from "./types/types";
 import { formatDuration } from "./ffmpeg/format";
 
 export function getSamples(metadata: VideoMetadata, numSamples: number): Sample[] {

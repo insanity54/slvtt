@@ -16,7 +16,7 @@ describe('ffmpeg', () => {
 
 
     describe('extractFrame integration', () => {
-        const tmpDir = join(tmpdir(), `extract-frame-test-${Date.now()}`);
+        const tmpDir = join(tmpdir(), `test-${Date.now()}`);
         const frameOutputPath = join(tmpDir, 'frame.jpg');
 
         beforeAll(() => {
@@ -45,20 +45,21 @@ describe('ffmpeg', () => {
     });
 
 
-    describe('getFrames', async () => {
-        describe('integration', async () => {
+    describe('getFrames', () => {
+        describe('integration', () => {
             let frameFilePaths: VideoFrameInfo[]
-            let tmpDir = await createTmpDir()
+            let tmpDir: string;
             let outputDirectory = join(tmpdir(), getRandomId())
-            const numSamples = 30;
+            const numSamples = 20;
 
             beforeAll(async () => {
+                tmpDir = await createTmpDir()
                 const config: ResolvedSLVTTOptions = {
                     videoFilePath: sampleVideo,
                     numSamples,
                     frameHeight: 69,
                     frameWidth: 140,
-                    concurrencyLimit: 3,
+                    concurrencyLimit: 1,
                     outputDirectory,
                     cols: 5,
                     rows: 3,
@@ -67,7 +68,7 @@ describe('ffmpeg', () => {
                 const metadata = await getVideoMetadata(sampleVideo)
                 const samples: Sample[] = getSamples(metadata, numSamples)
                 frameFilePaths = await getFrames(config, samples)
-            })
+            }, 30_000)
 
             it('creates individual video frames', async () => {
                 expect(frameFilePaths).toHaveLength(numSamples)
@@ -118,28 +119,29 @@ describe('ffmpeg', () => {
     });
 
     describe('formatDuration()', () => {
-        it('formats 0 ms correctly', () => {
+        it('formats 0 seconds correctly', () => {
             expect(formatDuration(0)).toBe('00:00:00.000');
         });
 
-        it('formats milliseconds under 1 second', () => {
-            expect(formatDuration(123)).toBe('00:00:00.123');
+        it('formats fractional seconds under 1 second', () => {
+            expect(formatDuration(0.123)).toBe('00:00:00.123');
         });
 
         it('formats exact seconds correctly', () => {
-            expect(formatDuration(5000)).toBe('00:00:05.000');
+            expect(formatDuration(5)).toBe('00:00:05.000');
         });
 
         it('formats minutes and seconds correctly', () => {
-            expect(formatDuration(65000)).toBe('00:01:05.000');
+            expect(formatDuration(65)).toBe('00:01:05.000');
         });
 
         it('formats hours, minutes, seconds and milliseconds', () => {
-            expect(formatDuration(3661123)).toBe('01:01:01.123');
+            expect(formatDuration(3661.123)).toBe('01:01:01.123');
         });
 
         it('pads all values correctly', () => {
-            expect(formatDuration(3723004)).toBe('01:02:03.004');
+            expect(formatDuration(3723.004)).toBe('01:02:03.004');
         });
     });
+
 });

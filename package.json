@@ -5,7 +5,8 @@
     "main": "src/index.js",
     "type": "module",
     "scripts": {
-        "test": "vitest"
+        "test": "vitest",
+        "build": "tsup src/cli.ts"
     },
     "repository": {
         "type": "git",

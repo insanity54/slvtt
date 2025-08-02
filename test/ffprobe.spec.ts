@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, beforeAll } from 'vitest';
-import { getVideoMetadata, FFprobeStats, pad, formatDuration } from '../src/ffprobe';
+import { getVideoMetadata, FFprobeStats } from '../src/ffprobe';
 import { sampleVideo } from '../src/constants';
 
 

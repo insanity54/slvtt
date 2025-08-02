@@ -2,7 +2,7 @@
 
 *<b>S</b>uper<b>l</b>ative <b>V</b>ideo <b>T</b>humbnail <b>T</b>hing*
 
-Create video sprites aka thumbnails aka storyboards aka "timeline hover previews" and a VTT to go. Creates output suitable for the following video player plugins.
+Create video sprites aka thumbnails aka storyboards aka "timeline hover previews" and a WEBVTT file. Creates output suitable for the following video player plugins.
 
 * https://github.com/chrisboustead/videojs-vtt-thumbnails
 * https://github.com/mayeaux/videojs-vtt-thumbnails
@@ -17,10 +17,10 @@ Create video sprites aka thumbnails aka storyboards aka "timeline hover previews
 ## Project Requirements
 
 * [x] Test Driven Development
-* [ ] Minimal dependencies
-* [ ] Extract idividual frames
+* [x] Minimal dependencies
+* [x] Extract idividual frames
 * [ ] Combine frames into a storyboard
-* [ ] Generate .vtt
+* [x] Generate .vtt
 * [ ] CI tests passing
 * [ ] Published on npm
 
@@ -59,7 +59,6 @@ slvtt/
 ├── .editorconfig
 ├── .eslintrc.js
 ├── .gitignore
-├── jest.config.js
 ├── package.json
 ├── README.md
 ├── tsconfig.json

@@ -26,6 +26,7 @@ export async function create(userSuppliedOptions: SLVTTOptions): Promise<void> {
         await createOutputDir(options.outputDirectory)
         manifest.metadata = await getVideoMetadata(manifest.options.videoFilePath);
         manifest.samples = getSamples(manifest.metadata, manifest.options.numSamples)
+        console.log(manifest.samples)
         manifest.frames = await getFrames(manifest.options, manifest.samples)
         manifest.sheets = await createVideoFrameSheets(manifest.options, manifest.frames, manifest.options.outputDirectory)
         manifest.vtt = renderVTT(
