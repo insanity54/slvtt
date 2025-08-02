@@ -1,5 +1,7 @@
 # slvtt
 
+[![CI](https://github.com/insanity54/slvtt/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/insanity54/slvtt/actions/workflows/main.yml)
+
 *<b>S</b>uper<b>l</b>ative <b>V</b>ideo <b>T</b>humbnail <b>T</b>hing*
 
 Create video sprites aka thumbnails aka storyboards aka "timeline hover previews" and a WEBVTT file. Creates output suitable for the following video player plugins.
