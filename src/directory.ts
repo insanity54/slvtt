@@ -1,8 +1,8 @@
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import { mkdir, rm, stat } from 'node:fs/promises';
+import { mkdir, rm, stat } from 'fs/promises';
 import { getRandomId } from './random';
-import { readdir } from 'node:fs';
+import { readdir } from 'fs';
 
 const tmpPrefix = resolve(tmpdir())
 

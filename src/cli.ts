@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import { resolve } from 'path';
-import { tmpdir } from 'os';
-import { exit } from 'process';
+import { resolve } from 'node:path';
+import { tmpdir } from 'node:os';
+import { exit } from 'node:process';
 import { create } from './main';
 import { getRandomId } from './random';
-import { rm } from 'fs/promises';
+import { rm } from 'node:fs/promises';
 
 function parseArgs(argv: string[]) {
   const args: Record<string, string> = {};

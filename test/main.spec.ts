@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { sampleVideo } from '../src/constants';
 import { readdir, readFile } from 'node:fs/promises';
-import { rmSync } from 'node:fs';
+import { rmSync } from 'fs';
 import { directoryExists } from '../src/directory';
 import { getRandomId } from '../src/random';
 

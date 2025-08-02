@@ -4,8 +4,8 @@ import { exec } from 'node:child_process';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { getRandomId } from '../src/random';
-import { promises as fs } from 'node:fs';
-import { rm } from 'node:fs/promises';
+import { promises as fs } from 'fs';
+import { rm } from 'fs/promises';
 
 function execAsync(command: string): Promise<{ stdout: string, stderr: string }> {
     return new Promise((resolve, reject) => {

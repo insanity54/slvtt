@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, beforeAll } from 'vitest';
 import { extractFrames } from '../src/ffmpeg';
 import { tmpdir } from 'os';
 import { createTmpDir, directoryExists } from '../src/directory';
-import { stat } from 'node:fs/promises';
+import { stat } from 'fs/promises';
 import { promisify } from 'node:util';
 
 
