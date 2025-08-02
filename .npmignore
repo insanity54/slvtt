@@ -3,7 +3,7 @@
 .nvmrc
 examples/
 
-# Ignore node_modules — npm ignores this by default, but it's good to be explicit
+# Ignore node_modules
 node_modules/
 
 # Ignore logs and temporary files
@@ -25,17 +25,12 @@ coverage/
 .idea/
 *.tsbuildinfo
 
-# Ignore build artifacts
-dist/
-build/
-out/
-
-# Ignore source files if you're publishing only compiled output
+# Ignore source files
 src/
 *.ts
 *.tsx
 
-# Ignore dotfiles (optional, if not needed for runtime)
+# Ignore dotfiles
 .env
 .env.*
 

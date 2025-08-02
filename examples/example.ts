@@ -1,5 +1,5 @@
 // use the following import in production
-// import { create, type SLVTTOptions } from '@insanity54/slvtt'; 
+// import { create, type SLVTTOptions } from 'slvtt'; 
 
 // use the next two import for testing
 import { create } from '../src/main.ts';

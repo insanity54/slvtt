@@ -1,12 +1,20 @@
 {
     "name": "slvtt",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Superlative video thumbnail thing",
-    "main": "src/index.js",
+    "exports": {
+        ".": {
+            "import": "./dist/main.cjs",
+            "types": "./dist/types.d.ts"
+        }
+    },
+    "bin": {
+        "slvtt": "./dist/cli.cjs"
+    },
     "type": "module",
     "scripts": {
         "test": "vitest",
-        "build": "tsup src/cli.ts"
+        "build": "tsup"
     },
     "repository": {
         "type": "git",

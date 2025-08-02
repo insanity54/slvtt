@@ -28,7 +28,7 @@ Create video sprites aka thumbnails aka storyboards aka "timeline hover previews
 * libvips
 * ffmpeg
 * ffprobe
-* nodejs >= V22.6.0
+* nodejs
 
 ## Project Requirements
 
@@ -38,7 +38,7 @@ Create video sprites aka thumbnails aka storyboards aka "timeline hover previews
 * [x] Combine frames into a sheet
 * [x] Generate .vtt
 * [x] CI tests passing
-* [ ] Published on npm
+* [x] Published on npm
 
 ## Installation
 

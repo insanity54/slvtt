@@ -15,7 +15,7 @@ export async function create(userSuppliedOptions: SLVTTOptions): Promise<void> {
     options.tmpDir = await createTmpDir();
 
     const manifest: SLVTTManifest = {
-        options,
+        options: options as Required<SLVTTOptions>,
         samples: [],
         frames: [],
         sheets: [],
