@@ -23,7 +23,7 @@ Create video sprites aka thumbnails aka storyboards aka "timeline hover previews
 * [x] Extract idividual frames
 * [x] Combine frames into a storyboard
 * [x] Generate .vtt
-* [ ] CI tests passing
+* [x] CI tests passing
 * [ ] Published on npm
 
 ## Gripes

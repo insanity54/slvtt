@@ -1,6 +1,6 @@
 {
     "name": "slvtt",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "Superlative video thumbnail thing",
     "main": "src/index.js",
     "type": "module",
