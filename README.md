@@ -19,52 +19,10 @@ Create video sprites aka thumbnails aka storyboards aka "timeline hover previews
 * [x] Test Driven Development
 * [x] Minimal dependencies
 * [x] Extract idividual frames
-* [ ] Combine frames into a storyboard
+* [x] Combine frames into a storyboard
 * [x] Generate .vtt
 * [ ] CI tests passing
 * [ ] Published on npm
-
-
-
-
-## Project structure
-
-```txt
-slvtt/
-├── bin/
-│   └── cli.js                  # Optional CLI wrapper for using the library from terminal
-├── dist/                       # Compiled output (e.g., from TypeScript or bundler)
-├── docs/
-│   └── usage.md                # Documentation for how to use the library
-├── examples/
-│   └── basic.js                # Minimal usage examples
-├── src/
-│   ├── index.ts                # Main entry point
-│   ├── config/
-│   │   └── defaults.ts         # Default configuration values
-│   ├── ffmpeg/
-│   │   ├── generateThumbnails.ts  # Handles calling ffmpeg for thumbnails
-│   │   └── generateSprite.ts      # Handles sprite sheet creation
-│   ├── vtt/
-│   │   └── generateVtt.ts      # Generates .vtt metadata from thumbnails
-│   ├── utils/
-│   │   ├── pathHelpers.ts      # File system utilities
-│   │   └── timeHelpers.ts      # Helpers for formatting timestamps
-│   └── types/
-│       └── index.d.ts          # Type definitions for config, options, etc.
-├── test/
-│   ├── ffmpeg.test.ts
-│   ├── vtt.test.ts
-│   └── integration.test.ts     # Full pipeline test
-├── .editorconfig
-├── .eslintrc.js
-├── .gitignore
-├── package.json
-├── README.md
-├── tsconfig.json
-└── vitest.config.ts            # or any other test runner config
-```
-
 
 ## Gripes
 
