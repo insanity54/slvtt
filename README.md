@@ -16,6 +16,7 @@ Create video sprites aka thumbnails aka storyboards aka "timeline hover previews
 ![Sprite sheet 2: grid of video frames](https://github.com/insanity54/slvtt/blob/main/examples/basic/sheet-2.webp?raw=true)
 ![Sprite sheet 3: grid of video frames](https://github.com/insanity54/slvtt/blob/main/examples/basic/sheet-3.webp?raw=true)
 ![Sprite sheet 4: grid of video frames](https://github.com/insanity54/slvtt/blob/main/examples/basic/sheet-4.webp?raw=true)
+
 ![vtt file describing the sheets of video frames](https://github.com/insanity54/slvtt/blob/main/examples/basic/sl.vtt?raw=true)
 
 
@@ -31,7 +32,7 @@ Create video sprites aka thumbnails aka storyboards aka "timeline hover previews
 * [x] Test Driven Development
 * [x] Minimal dependencies
 * [x] Extract idividual frames
-* [x] Combine frames into a storyboard
+* [x] Combine frames into a sheet
 * [x] Generate .vtt
 * [x] CI tests passing
 * [ ] Published on npm
