@@ -9,8 +9,11 @@ Create video sprites aka thumbnails aka storyboards aka "timeline hover previews
 * https://github.com/chrisboustead/videojs-vtt-thumbnails
 * https://github.com/mayeaux/videojs-vtt-thumbnails
 
-## Sample output
+## Sample input
 
+![sample.mp4](https://github.com/insanity54/slvtt/blob/main/test/fixtures/sample.mp4?raw=true)
+
+## Sample output
 
 ![Sprite sheet 1: grid of video frames](https://github.com/insanity54/slvtt/blob/main/examples/basic/sheet-1.webp?raw=true)
 ![Sprite sheet 2: grid of video frames](https://github.com/insanity54/slvtt/blob/main/examples/basic/sheet-2.webp?raw=true)
