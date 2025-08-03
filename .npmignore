@@ -29,8 +29,6 @@ coverage/
 
 # Ignore source files
 src/
-*.ts
-*.tsx
 
 # Ignore dotfiles
 .env

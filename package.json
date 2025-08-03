@@ -1,9 +1,10 @@
 {
     "name": "slvtt",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "description": "Superlative video thumbnail thing",
     "exports": {
-        "default": "./dist/main.js"
+        "default": "./dist/main.js",
+        "types": "./dist/main.d.ts"
     },
     "bin": {
         "slvtt": "./dist/cli.js"
